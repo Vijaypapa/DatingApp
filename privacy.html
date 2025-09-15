@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Privacy Policy — Top Dating Apps 2025</title>
+  <meta name="description" content="Privacy policy and affiliate disclosure for Top Dating Apps 2025." />
+  <link rel="canonical" href="privacy.html" />
+  <meta property="og:title" content="Privacy Policy — Top Dating Apps 2025" />
+  <meta name="twitter:card" content="summary" />
+  <style>
+    :root{--accent:#e91e63;--muted:#666;--bg:#fff;--card:#fafafa;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+    .container{max-width:1000px;margin:1.25rem auto;padding:0 1rem}
+    .hero{background:#f7f9fc;padding:1.25rem;border-radius:8px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+    .card{background:var(--card);padding:1rem;border-radius:8px;border:1px solid #eee}
+    footer{padding:1rem 1.25rem;background:#f3f4f6;color:var(--muted);text-align:center;margin-top:1.25rem}
+    a.cta{background:var(--accent);color:#fff;padding:.5rem .75rem;border-radius:6px;text-decoration:none;display:inline-block}
+  </style>
+
+  <style>
+  /* navbar unified design */
+  .nav-container { display:flex; align-items:center; justify-content:space-between; max-width:980px; margin:0 auto; padding:.6rem 1rem; position:relative; }
+  .menu-icon { font-size:1.6rem; cursor:pointer; color:#fff; background:#0b2545; padding:.35rem .6rem; border-radius:6px; display:inline-flex; align-items:center; justify-content:center; }
+  .page-title { margin-left:.75rem; font-weight:600; color:#0b2545; }
+
+  /* hide the native checkbox */
+  #menu-toggle { display:none; }
+
+  /* mobile menu (hidden by default) */
+  .navbar { position:absolute; top:100%; left:0; right:0; background:#ffffff; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,.08); display:none; z-index:999; }
+  .navbar ul { list-style:none; padding:0; margin:0; }
+  .navbar li { border-bottom:1px solid #eee; }
+  .navbar a { display:block; padding:.9rem 1rem; color:#111; text-decoration:none; }
+  .navbar a:hover, .navbar a:focus { background:#f3f4f6; }
+
+  /* show menu when checkbox is checked */
+  #menu-toggle:checked + #menu-icon + .page-title + .navbar { display:block; }
+
+  /* Desktop: show nav inline and hide hamburger/title */
+  @media(min-width:768px) {
+    .menu-icon { display:none; }
+    .page-title { display:none; }
+    .navbar { display:block !important; position:static; box-shadow:none; background:transparent; }
+    .navbar ul { display:flex; gap:0.5rem; }
+    .navbar li { border:none; }
+    .navbar a { padding:.4rem .6rem; background:transparent; color:inherit; }
+    .navbar a:hover { background:#0b2545; color:#fff; border-radius:6px; }
+  }
+  </style>
+
+  <script>
+  /* Auto-close menu script */
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menu-toggle');
+    const label = document.getElementById('menu-icon');
+    const nav = document.getElementById('main-nav');
+    const links = nav.querySelectorAll('a');
+    let autoCloseTimer = null;
+    const AUTO_CLOSE_MS = 2500;
+
+    function setAria() {
+      const expanded = toggle.checked ? 'true' : 'false';
+      label.setAttribute('aria-expanded', expanded);
+      nav.setAttribute('aria-hidden', toggle.checked ? 'false' : 'true');
+    }
+    setAria();
+
+    function clearAutoClose() {
+      if (autoCloseTimer) { clearTimeout(autoCloseTimer); autoCloseTimer = null; }
+    }
+    function startAutoClose() {
+      clearAutoClose();
+      autoCloseTimer = setTimeout(() => {
+        if (toggle.checked) {
+          toggle.checked = false;
+          setAria();
+          clearAutoClose();
+        }
+      }, AUTO_CLOSE_MS);
+    }
+
+    toggle.addEventListener('change', () => {
+      setAria();
+      if (toggle.checked) startAutoClose();
+      else clearAutoClose();
+    });
+
+    ['touchstart', 'mouseenter', 'focusin'].forEach(evt =>
+      nav.addEventListener(evt, () => { clearAutoClose(); })
+    );
+    nav.addEventListener('mouseleave', () => { if (toggle.checked) startAutoClose(); });
+    nav.addEventListener('touchend', () => { if (toggle.checked) startAutoClose(); });
+
+    links.forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.checked = false;
+        setAria();
+        clearAutoClose();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const isOutside = !nav.contains(e.target) && !label.contains(e.target) && !toggle.contains(e.target);
+      if (isOutside && toggle.checked) {
+        toggle.checked = false;
+        setAria();
+        clearAutoClose();
+      }
+    });
+
+    label.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        setTimeout(setAria, 10);
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+ <header>
+  <div class="nav-container">
+    <input type="checkbox" id="menu-toggle" aria-hidden="true">
+    <label for="menu-toggle" id="menu-icon" class="menu-icon" aria-controls="main-nav" aria-expanded="false" title="Menu">&#9776;</label>
+    <span class="page-title">Privacy</span>
+    <nav class="navbar" id="main-nav" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="top-10-dating-apps-world.html">World Apps</a></li>
+        <li><a href="top-10-dating-apps-india.html">India Apps</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </div>
+ </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: September 13, 2025</p>
+      <h2>Information we collect</h2>
+      <p>We do not collect personal information unless you voluntarily provide it through our contact form or newsletter signup (which are HTML-only placeholders). If you provide info, it will be used only to respond to your message or to send requested content.</p>
+
+      <h2>Cookies</h2>
+      <p>We may use cookies or third-party tracking (analytics) to understand site usage. If you implement analytics, ensure you update this policy and provide controls per local regulations.</p>
+
+      <h2>Affiliate disclosure</h2>
+      <p>We may earn affiliate commissions from links listed on this site. This does not influence editorial content; we maintain editorial independence.</p>
+
+      <h2>Contact</h2>
+      <p>For privacy requests, use the contact form on our Contact page.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Top Dating Apps — <a href="terms.html">Terms</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Top Dating Apps 2025</title>
+  <meta name="description" content="About Top Dating Apps 2025 — who we are, how we evaluate apps, and editorial policy." />
+  <link rel="canonical" href="about.html" />
+  <meta property="og:title" content="About — Top Dating Apps 2025" />
+  <meta property="og:description" content="Learn about our team, evaluation criteria and editorial independence." />
+  <meta name="twitter:card" content="summary" />
+
+
+ <style>
+  /* basic layout */
+  .nav-container { display:flex; align-items:center; justify-content:space-between; max-width:980px; margin:0 auto; padding:.6rem 1rem; position:relative; }
+  .menu-icon { font-size:1.6rem; cursor:pointer; color:#fff; background:#0b2545; padding:.35rem .6rem; border-radius:6px; display:inline-flex; align-items:center; justify-content:center; }
+  .page-title { margin-left:.75rem; font-weight:600; color:#0b2545; }
+
+  /* hide the native checkbox */
+  #menu-toggle { display:none; }
+
+  /* mobile menu (hidden by default) */
+  .navbar { position:absolute; top:100%; left:0; right:0; background:#ffffff; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,.08); display:none; z-index:999; }
+  .navbar ul { list-style:none; padding:0; margin:0; }
+  .navbar li { border-bottom:1px solid #eee; }
+  .navbar a { display:block; padding:.9rem 1rem; color:#111; text-decoration:none; }
+  .navbar a:hover, .navbar a:focus { background:#f3f4f6; }
+
+  /* show menu when checkbox is checked */
+  /* DOM order must match: #menu-toggle + .menu-icon + .page-title + .navbar */
+  #menu-toggle:checked + #menu-icon + .page-title + .navbar { display:block; }
+
+  /* accessibility attributes adjusted by JS (aria-hidden and aria-expanded) */
+
+  /* Desktop: show nav inline and hide hamburger/title */
+  @media(min-width:768px) {
+    .menu-icon { display:none; }
+    .page-title { display:none; }
+    .navbar { display:block !important; position:static; box-shadow:none; background:transparent; }
+    .navbar ul { display:flex; gap:0.5rem; }
+    .navbar li { border:none; }
+    .navbar a { padding:.4rem .6rem; background:transparent; color:inherit; }
+    .navbar a:hover { background:#0b2545; color:#fff; border-radius:6px; }
+  }
+</style>
+
+<script>
+/* Auto-close menu script (robust, cancels on interaction).
+   Paste this once per page (before </body> recommended). */
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('menu-toggle');
+  const label = document.getElementById('menu-icon');
+  const nav = document.getElementById('main-nav');
+  const links = nav.querySelectorAll('a');
+  let autoCloseTimer = null;
+  const AUTO_CLOSE_MS = 2500; // change to 1000..3000 if you prefer
+
+  // set aria attributes initial state
+  function setAria() {
+    const expanded = toggle.checked ? 'true' : 'false';
+    label.setAttribute('aria-expanded', expanded);
+    nav.setAttribute('aria-hidden', toggle.checked ? 'false' : 'true');
+  }
+  setAria();
+
+  function clearAutoClose() {
+    if (autoCloseTimer) { clearTimeout(autoCloseTimer); autoCloseTimer = null; }
+  }
+  function startAutoClose() {
+    clearAutoClose();
+    autoCloseTimer = setTimeout(() => {
+      if (toggle.checked) {
+        toggle.checked = false;
+        setAria();
+        clearAutoClose();
+      }
+    }, AUTO_CLOSE_MS);
+  }
+
+  // When the checkbox changes (open/close), start/clear timer and update aria
+  toggle.addEventListener('change', () => {
+    setAria();
+    if (toggle.checked) {
+      startAutoClose(); // start auto close when opened
+    } else {
+      clearAutoClose();
+    }
+  });
+
+  // If user interacts with the menu (touch/mouse/focus), cancel auto-close
+  ['touchstart', 'mouseenter', 'focusin'].forEach(evt =>
+    nav.addEventListener(evt, () => { clearAutoClose(); })
+  );
+
+  // When interaction ends (mouse leaves or touch ends), restart the timer (if still open)
+  nav.addEventListener('mouseleave', () => { if (toggle.checked) startAutoClose(); });
+  nav.addEventListener('touchend', () => { if (toggle.checked) startAutoClose(); });
+
+  // When the user clicks any menu link, close immediately
+  links.forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.checked = false;
+      setAria();
+      clearAutoClose();
+      // normal navigation will follow the link; no need to delay
+    });
+  });
+
+  // Optional: clicking outside the menu closes it (helpful UX)
+  document.addEventListener('click', (e) => {
+    const isOutside = !nav.contains(e.target) && !label.contains(e.target) && !toggle.contains(e.target);
+    if (isOutside && toggle.checked) {
+      toggle.checked = false;
+      setAria();
+      clearAutoClose();
+    }
+  });
+
+  // Accessibility: if user tab-focuses the label, update aria (cover keyboard toggle)
+  label.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { // space or enter toggles label
+      setTimeout(setAria, 10);
+    }
+  });
+});
+</script>
+
+
+</head>
+<body>
+
+
+ <header>
+  <div class="nav-container">
+    <!-- checkbox toggle (hidden) -->
+    <input type="checkbox" id="menu-toggle" aria-hidden="true">
+
+    <!-- visible hamburger icon -->
+    <label for="menu-toggle" id="menu-icon" class="menu-icon" aria-controls="main-nav" aria-expanded="false" title="Menu">
+      &#9776;
+    </label>
+
+    <!-- current page title (change per page) -->
+    <span class="page-title">About</span>
+
+    <!-- the menu. ID used by JS/CSS -->
+    <nav class="navbar" id="main-nav" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="top-10-dating-apps-world.html">World Apps</a></li>
+        <li><a href="top-10-dating-apps-india.html">India Apps</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="card">
+      <h1>About Us</h1>
+      <p>We are an independent editorial team that reviews and curates lists of popular dating apps. Our goal is to help users choose the right app for their goals — whether it's casual dating, friendships, or long-term relationships.</p>
+      <h2>How we evaluate</h2>
+      <ul>
+        <li>User base & reach</li>
+        <li>Platform availability (iOS, Android, Web)</li>
+        <li>Safety & verification features</li>
+        <li>Pricing & transparency</li>
+        <li>Localization and user experience</li>
+      </ul>
+      <h2>Editorial policy</h2>
+      <p>We strive for neutral, accurate summaries. Where affiliate relationships exist, we disclose them clearly on pages that contain affiliate links.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Top Dating Apps — <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a>
+  </footer>
+</body>
+</html>
